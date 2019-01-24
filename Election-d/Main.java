@@ -46,33 +46,33 @@ public class Main {
 //        int[] vicepresident = new int[5];
 //        int[] secretary = new int[5];
 //        int[] treasurer = new int[5];
-        int[] voting = new int[presidentList.length + vicepresidentList.length + secretaryList.length + treasurerList.length];
+        int[] votes = new int[presidentList.length + vicepresidentList.length + secretaryList.length + treasurerList.length];
 
         //matches ascii character to actual string integer
         for (int c = 0; c < voters.length; c++) {
-            if ((int)(votersList[c].charAt(7)) == 0 + 48) voting[0]++;
-            if ((int)(votersList[c].charAt(7)) == 1 + 48) voting[1]++;
-            if ((int)(votersList[c].charAt(7)) == 2 + 48) voting[2]++;
-            if ((int)(votersList[c].charAt(7)) == 3 + 48) voting[3]++;
-            if ((int)(votersList[c].charAt(7)) == 4 + 48) voting[4]++;
+            if ((int)(votersList[c].charAt(7)) == 0 + 48) votes[0]++;
+            if ((int)(votersList[c].charAt(7)) == 1 + 48) votes[1]++;
+            if ((int)(votersList[c].charAt(7)) == 2 + 48) votes[2]++;
+            if ((int)(votersList[c].charAt(7)) == 3 + 48) votes[3]++;
+            if ((int)(votersList[c].charAt(7)) == 4 + 48) votes[4]++;
 
-            if ((int)(votersList[c].charAt(9)) == 0 + 48) voting[5]++;
-            if ((int)(votersList[c].charAt(9)) == 1 + 48) voting[6]++;
-            if ((int)(votersList[c].charAt(9)) == 2 + 48) voting[7]++;
-            if ((int)(votersList[c].charAt(9)) == 3 + 48) voting[8]++;
-            if ((int)(votersList[c].charAt(9)) == 4 + 48) voting[9]++;
+            if ((int)(votersList[c].charAt(9)) == 0 + 48) votes[5]++;
+            if ((int)(votersList[c].charAt(9)) == 1 + 48) votes[6]++;
+            if ((int)(votersList[c].charAt(9)) == 2 + 48) votes[7]++;
+            if ((int)(votersList[c].charAt(9)) == 3 + 48) votes[8]++;
+            if ((int)(votersList[c].charAt(9)) == 4 + 48) votes[9]++;
 
-            if ((int)(votersList[c].charAt(11)) == 0 + 48) voting[10]++;
-            if ((int)(votersList[c].charAt(11)) == 1 + 48) voting[11]++;
-            if ((int)(votersList[c].charAt(11)) == 2 + 48) voting[12]++;
-            if ((int)(votersList[c].charAt(11)) == 3 + 48) voting[13]++;
-            if ((int)(votersList[c].charAt(11)) == 4 + 48) voting[14]++;
+            if ((int)(votersList[c].charAt(11)) == 0 + 48) votes[10]++;
+            if ((int)(votersList[c].charAt(11)) == 1 + 48) votes[11]++;
+            if ((int)(votersList[c].charAt(11)) == 2 + 48) votes[12]++;
+            if ((int)(votersList[c].charAt(11)) == 3 + 48) votes[13]++;
+            if ((int)(votersList[c].charAt(11)) == 4 + 48) votes[14]++;
 
-            if ((int)(votersList[c].charAt(13)) == 0 + 48) voting[15]++;
-            if ((int)(votersList[c].charAt(13)) == 1 + 48) voting[16]++;
-            if ((int)(votersList[c].charAt(13)) == 2 + 48) voting[17]++;
-            if ((int)(votersList[c].charAt(13)) == 3 + 48) voting[18]++;
-            if ((int)(votersList[c].charAt(13)) == 4 + 48) voting[19]++;
+            if ((int)(votersList[c].charAt(13)) == 0 + 48) votes[15]++;
+            if ((int)(votersList[c].charAt(13)) == 1 + 48) votes[16]++;
+            if ((int)(votersList[c].charAt(13)) == 2 + 48) votes[17]++;
+            if ((int)(votersList[c].charAt(13)) == 3 + 48) votes[18]++;
+            if ((int)(votersList[c].charAt(13)) == 4 + 48) votes[19]++;
         }
 
         //Tried to make a set of loops that sort the amount of votes from highest to lowest and gave the index of the
@@ -80,32 +80,32 @@ public class Main {
 
 
         System.out.println("\nPresident List:");
-        for (int e1 = 0; e1 < presidentList.length; e1++) { System.out.println(presidentList[e1] + " - " + voting[e1] + " votes"); }
-        if (voting[1] > voting[2] && voting[1] > voting[3] && voting[1] > voting[4]) System.out.println(presidentList[1] + " won!");
-        if (voting[2] > voting[1] && voting[2] > voting[3] && voting[2] > voting[4]) System.out.println(presidentList[2] + " won!");
-        if (voting[3] > voting[1] && voting[3] > voting[2] && voting[3] > voting[4]) System.out.println(presidentList[3] + " won!");
-        if (voting[4] > voting[1] && voting[4] > voting[2] && voting[4] > voting[3]) System.out.println(presidentList[4] + " won!");
+        for (int e1 = 1; e1 < presidentList.length; e1++) { System.out.println(presidentList[e1] + " - " + votes[e1] + " votes"); }
+        if (votes[1] > votes[2] && votes[1] > votes[3] && votes[1] > votes[4]) System.out.println(presidentList[1] + " won!");
+        if (votes[2] > votes[1] && votes[2] > votes[3] && votes[2] > votes[4]) System.out.println(presidentList[2] + " won!");
+        if (votes[3] > votes[1] && votes[3] > votes[2] && votes[3] > votes[4]) System.out.println(presidentList[3] + " won!");
+        if (votes[4] > votes[1] && votes[4] > votes[2] && votes[4] > votes[3]) System.out.println(presidentList[4] + " won!");
 
         System.out.println("\nVice President List:");
-        for (int e2 = 0; e2 < vicepresidentList.length; e2++) { System.out.println(vicepresidentList[e2] + " - " + voting[e2+5] + " votes"); }
-        if (voting[6] > voting[7] && voting[6] > voting[8] && voting[6] > voting[9]) System.out.println(vicepresidentList[1] + " won!");
-        if (voting[7] > voting[6] && voting[7] > voting[8] && voting[7] > voting[9]) System.out.println(vicepresidentList[2] + " won!");
-        if (voting[8] > voting[6] && voting[8] > voting[7] && voting[8] > voting[9]) System.out.println(vicepresidentList[3] + " won!");
-        if (voting[9] > voting[6] && voting[9] > voting[7] && voting[9] > voting[8]) System.out.println(vicepresidentList[4] + " won!");
+        for (int e2 = 1; e2 < vicepresidentList.length; e2++) { System.out.println(vicepresidentList[e2] + " - " + votes[e2+5] + " votes"); }
+        if (votes[6] > votes[7] && votes[6] > votes[8] && votes[6] > votes[9]) System.out.println(vicepresidentList[1] + " won!");
+        if (votes[7] > votes[6] && votes[7] > votes[8] && votes[7] > votes[9]) System.out.println(vicepresidentList[2] + " won!");
+        if (votes[8] > votes[6] && votes[8] > votes[7] && votes[8] > votes[9]) System.out.println(vicepresidentList[3] + " won!");
+        if (votes[9] > votes[6] && votes[9] > votes[7] && votes[9] > votes[8]) System.out.println(vicepresidentList[4] + " won!");
 
         System.out.println("\nSecretary List: ");
-        for (int e3 = 0; e3 < secretaryList.length; e3++) { System.out.println(secretaryList[e3] + " - " + voting[e3+10] + " votes"); }
-        if (voting[11] > voting[12] && voting[11] > voting[13] && voting[11] > voting[14]) System.out.println(secretaryList[1] + " won!");
-        if (voting[12] > voting[11] && voting[12] > voting[13] && voting[12] > voting[14]) System.out.println(secretaryList[2] + " won!");
-        if (voting[13] > voting[11] && voting[13] > voting[12] && voting[13] > voting[14]) System.out.println(secretaryList[3] + " won!");
-        if (voting[14] > voting[11] && voting[14] > voting[12] && voting[14] > voting[13]) System.out.println(secretaryList[4] + " won!");
+        for (int e3 = 1; e3 < secretaryList.length; e3++) { System.out.println(secretaryList[e3] + " - " + votes[e3+10] + " votes"); }
+        if (votes[11] > votes[12] && votes[11] > votes[13] && votes[11] > votes[14]) System.out.println(secretaryList[1] + " won!");
+        if (votes[12] > votes[11] && votes[12] > votes[13] && votes[12] > votes[14]) System.out.println(secretaryList[2] + " won!");
+        if (votes[13] > votes[11] && votes[13] > votes[12] && votes[13] > votes[14]) System.out.println(secretaryList[3] + " won!");
+        if (votes[14] > votes[11] && votes[14] > votes[12] && votes[14] > votes[13]) System.out.println(secretaryList[4] + " won!");
 
         System.out.println("\nTreasurer List: ");
-        for (int e4 = 0; e4 < treasurerList.length; e4++) { System.out.println(treasurerList[e4] + " - " + voting[e4+15] + " votes"); }
-        if (voting[16] > voting[17] && voting[16] > voting[18] && voting[16] > voting[19]) System.out.println(treasurerList[1] + " won!");
-        if (voting[17] > voting[16] && voting[17] > voting[18] && voting[17] > voting[19]) System.out.println(treasurerList[2] + " won!");
-        if (voting[18] > voting[16] && voting[18] > voting[17] && voting[18] > voting[19]) System.out.println(treasurerList[3] + " won!");
-        if (voting[19] > voting[16] && voting[19] > voting[17] && voting[19] > voting[18]) System.out.println(treasurerList[4] + " won!");
+        for (int e4 = 1; e4 < treasurerList.length; e4++) { System.out.println(treasurerList[e4] + " - " + votes[e4+15] + " votes"); }
+        if (votes[16] > votes[17] && votes[16] > votes[18] && votes[16] > votes[19]) System.out.println(treasurerList[1] + " won!");
+        if (votes[17] > votes[16] && votes[17] > votes[18] && votes[17] > votes[19]) System.out.println(treasurerList[2] + " won!");
+        if (votes[18] > votes[16] && votes[18] > votes[17] && votes[18] > votes[19]) System.out.println(treasurerList[3] + " won!");
+        if (votes[19] > votes[16] && votes[19] > votes[17] && votes[19] > votes[18]) System.out.println(treasurerList[4] + " won!");
 
         System.out.println("\nIn addition, there were " + voterFrauds + " instances of voter fraud.");
 
